@@ -1,0 +1,662 @@
+{
+ "가": {
+  "file": "ac00.m4a",
+  "kind": "cons",
+  "dur": 0.361,
+  "bytes": 5715
+ },
+ "까": {
+  "file": "ae4c.m4a",
+  "kind": "cons",
+  "dur": 0.287,
+  "bytes": 5380
+ },
+ "나": {
+  "file": "b098.m4a",
+  "kind": "cons",
+  "dur": 0.349,
+  "bytes": 5615
+ },
+ "다": {
+  "file": "b2e4.m4a",
+  "kind": "cons",
+  "dur": 0.36,
+  "bytes": 5782
+ },
+ "따": {
+  "file": "b530.m4a",
+  "kind": "cons",
+  "dur": 0.304,
+  "bytes": 5496
+ },
+ "라": {
+  "file": "b77c.m4a",
+  "kind": "cons",
+  "dur": 0.366,
+  "bytes": 5745
+ },
+ "마": {
+  "file": "b9c8.m4a",
+  "kind": "cons",
+  "dur": 0.349,
+  "bytes": 5802
+ },
+ "바": {
+  "file": "bc14.m4a",
+  "kind": "cons",
+  "dur": 0.361,
+  "bytes": 5661
+ },
+ "빠": {
+  "file": "be60.m4a",
+  "kind": "cons",
+  "dur": 0.291,
+  "bytes": 5446
+ },
+ "사": {
+  "file": "c0ac.m4a",
+  "kind": "cons",
+  "dur": 0.413,
+  "bytes": 6243
+ },
+ "싸": {
+  "file": "c2f8.m4a",
+  "kind": "cons",
+  "dur": 0.484,
+  "bytes": 6480
+ },
+ "아": {
+  "file": "c544.m4a",
+  "kind": "vowel",
+  "dur": 0.366,
+  "bytes": 5609
+ },
+ "자": {
+  "file": "c790.m4a",
+  "kind": "cons",
+  "dur": 0.397,
+  "bytes": 6179
+ },
+ "짜": {
+  "file": "c9dc.m4a",
+  "kind": "cons",
+  "dur": 0.347,
+  "bytes": 6078
+ },
+ "차": {
+  "file": "cc28.m4a",
+  "kind": "cons",
+  "dur": 0.41,
+  "bytes": 6174
+ },
+ "카": {
+  "file": "ce74.m4a",
+  "kind": "cons",
+  "dur": 0.384,
+  "bytes": 5916
+ },
+ "타": {
+  "file": "d0c0.m4a",
+  "kind": "cons",
+  "dur": 0.383,
+  "bytes": 5892
+ },
+ "파": {
+  "file": "d30c.m4a",
+  "kind": "cons",
+  "dur": 0.389,
+  "bytes": 5764
+ },
+ "하": {
+  "file": "d558.m4a",
+  "kind": "cons",
+  "dur": 0.382,
+  "bytes": 5924
+ },
+ "애": {
+  "file": "c560.m4a",
+  "kind": "vowel",
+  "dur": 0.371,
+  "bytes": 5630
+ },
+ "야": {
+  "file": "c57c.m4a",
+  "kind": "vowel",
+  "dur": 0.342,
+  "bytes": 5877
+ },
+ "얘": {
+  "file": "c598.m4a",
+  "kind": "vowel",
+  "dur": 0.352,
+  "bytes": 5800
+ },
+ "어": {
+  "file": "c5b4.m4a",
+  "kind": "vowel",
+  "dur": 0.376,
+  "bytes": 5590
+ },
+ "에": {
+  "file": "c5d0.m4a",
+  "kind": "vowel",
+  "dur": 0.243,
+  "bytes": 5249
+ },
+ "여": {
+  "file": "c5ec.m4a",
+  "kind": "vowel",
+  "dur": 0.317,
+  "bytes": 5631
+ },
+ "예": {
+  "file": "c608.m4a",
+  "kind": "vowel",
+  "dur": 0.352,
+  "bytes": 5786
+ },
+ "오": {
+  "file": "c624.m4a",
+  "kind": "vowel",
+  "dur": 0.376,
+  "bytes": 5749
+ },
+ "와": {
+  "file": "c640.m4a",
+  "kind": "vowel",
+  "dur": 0.343,
+  "bytes": 5627
+ },
+ "왜": {
+  "file": "c65c.m4a",
+  "kind": "vowel",
+  "dur": 0.354,
+  "bytes": 6326
+ },
+ "외": {
+  "file": "c678.m4a",
+  "kind": "vowel",
+  "dur": 0.376,
+  "bytes": 5797
+ },
+ "요": {
+  "file": "c694.m4a",
+  "kind": "vowel",
+  "dur": 0.382,
+  "bytes": 5729
+ },
+ "우": {
+  "file": "c6b0.m4a",
+  "kind": "vowel",
+  "dur": 0.376,
+  "bytes": 5650
+ },
+ "워": {
+  "file": "c6cc.m4a",
+  "kind": "vowel",
+  "dur": 0.364,
+  "bytes": 6283
+ },
+ "웨": {
+  "file": "c6e8.m4a",
+  "kind": "vowel",
+  "dur": 0.359,
+  "bytes": 6388
+ },
+ "위": {
+  "file": "c704.m4a",
+  "kind": "vowel",
+  "dur": 0.329,
+  "bytes": 6318
+ },
+ "유": {
+  "file": "c720.m4a",
+  "kind": "vowel",
+  "dur": 0.352,
+  "bytes": 5768
+ },
+ "으": {
+  "file": "c73c.m4a",
+  "kind": "vowel",
+  "dur": 0.375,
+  "bytes": 5798
+ },
+ "의": {
+  "file": "c758.m4a",
+  "kind": "vowel",
+  "dur": 0.243,
+  "bytes": 5249
+ },
+ "이": {
+  "file": "c774.m4a",
+  "kind": "vowel",
+  "dur": 0.376,
+  "bytes": 5792
+ },
+ "우유": {
+  "file": "c6b0c720.m4a",
+  "kind": "word",
+  "dur": 0.454,
+  "bytes": 6042
+ },
+ "오이": {
+  "file": "c624c774.m4a",
+  "kind": "word",
+  "dur": 0.39,
+  "bytes": 5791
+ },
+ "나무": {
+  "file": "b098bb34.m4a",
+  "kind": "word",
+  "dur": 0.47,
+  "bytes": 5959
+ },
+ "바다": {
+  "file": "bc14b2e4.m4a",
+  "kind": "word",
+  "dur": 0.517,
+  "bytes": 6356
+ },
+ "사과": {
+  "file": "c0acacfc.m4a",
+  "kind": "word",
+  "dur": 0.522,
+  "bytes": 6537
+ },
+ "학교": {
+  "file": "d559ad50.m4a",
+  "kind": "word",
+  "dur": 0.642,
+  "bytes": 6789
+ },
+ "한국": {
+  "file": "d55cad6d.m4a",
+  "kind": "word",
+  "dur": 0.547,
+  "bytes": 6587
+ },
+ "사람": {
+  "file": "c0acb78c.m4a",
+  "kind": "word",
+  "dur": 0.522,
+  "bytes": 6402
+ },
+ "학생": {
+  "file": "d559c0dd.m4a",
+  "kind": "word",
+  "dur": 0.63,
+  "bytes": 7114
+ },
+ "이름": {
+  "file": "c774b984.m4a",
+  "kind": "word",
+  "dur": 0.505,
+  "bytes": 6461
+ },
+ "은행": {
+  "file": "c740d589.m4a",
+  "kind": "word",
+  "dur": 0.436,
+  "bytes": 6002
+ },
+ "전화": {
+  "file": "c804d654.m4a",
+  "kind": "word",
+  "dur": 0.522,
+  "bytes": 6621
+ },
+ "한국어": {
+  "file": "d55cad6dc5b4.m4a",
+  "kind": "word",
+  "dur": 0.781,
+  "bytes": 7865
+ },
+ "음악": {
+  "file": "c74cc545.m4a",
+  "kind": "word",
+  "dur": 0.353,
+  "bytes": 5715
+ },
+ "국물": {
+  "file": "ad6dbb3c.m4a",
+  "kind": "word",
+  "dur": 0.619,
+  "bytes": 6716
+ },
+ "설날": {
+  "file": "c124b0a0.m4a",
+  "kind": "word",
+  "dur": 0.627,
+  "bytes": 6785
+ },
+ "연락": {
+  "file": "c5f0b77d.m4a",
+  "kind": "word",
+  "dur": 0.515,
+  "bytes": 6444
+ },
+ "좋다": {
+  "file": "c88bb2e4.m4a",
+  "kind": "word",
+  "dur": 0.62,
+  "bytes": 6857
+ },
+ "먹다": {
+  "file": "ba39b2e4.m4a",
+  "kind": "word",
+  "dur": 0.596,
+  "bytes": 7264
+ },
+ "집에": {
+  "file": "c9d1c5d0.m4a",
+  "kind": "word",
+  "dur": 0.535,
+  "bytes": 6954
+ },
+ "옷을": {
+  "file": "c637c744.m4a",
+  "kind": "word",
+  "dur": 0.517,
+  "bytes": 6450
+ },
+ "많이": {
+  "file": "b9cec774.m4a",
+  "kind": "word",
+  "dur": 0.534,
+  "bytes": 6635
+ },
+ "십만": {
+  "file": "c2edb9cc.m4a",
+  "kind": "word",
+  "dur": 0.644,
+  "bytes": 6988
+ },
+ "머바": {
+  "file": "ba38bc14.m4a",
+  "kind": "pseudo",
+  "dur": 0.558,
+  "bytes": 6787
+ },
+ "누다": {
+  "file": "b204b2e4.m4a",
+  "kind": "pseudo",
+  "dur": 0.525,
+  "bytes": 6496
+ },
+ "기모": {
+  "file": "ae30baa8.m4a",
+  "kind": "pseudo",
+  "dur": 0.491,
+  "bytes": 6272
+ },
+ "퉤누": {
+  "file": "d264b204.m4a",
+  "kind": "pseudo",
+  "dur": 0.591,
+  "bytes": 6516
+ },
+ "쟈보": {
+  "file": "c7c8bcf4.m4a",
+  "kind": "pseudo",
+  "dur": 0.598,
+  "bytes": 6869
+ },
+ "뢰미": {
+  "file": "b8b0bbf8.m4a",
+  "kind": "pseudo",
+  "dur": 0.539,
+  "bytes": 6321
+ },
+ "쒀나": {
+  "file": "c480b098.m4a",
+  "kind": "pseudo",
+  "dur": 0.58,
+  "bytes": 6744
+ },
+ "뷔더": {
+  "file": "bdd4b354.m4a",
+  "kind": "pseudo",
+  "dur": 0.591,
+  "bytes": 6774
+ },
+ "귬바": {
+  "file": "adecbc14.m4a",
+  "kind": "pseudo",
+  "dur": 0.621,
+  "bytes": 6817
+ },
+ "쫘리": {
+  "file": "cad8b9ac.m4a",
+  "kind": "pseudo",
+  "dur": 0.578,
+  "bytes": 6930
+ },
+ "듀헤": {
+  "file": "b4c0d5e4.m4a",
+  "kind": "pseudo",
+  "dur": 0.538,
+  "bytes": 6365
+ },
+ "프외": {
+  "file": "d504c678.m4a",
+  "kind": "pseudo",
+  "dur": 0.462,
+  "bytes": 6321
+ },
+ "악": {
+  "file": "c545.m4a",
+  "kind": "final",
+  "dur": 0.215,
+  "bytes": 5078
+ },
+ "밖": {
+  "file": "bc16.m4a",
+  "kind": "final",
+  "dur": 0.269,
+  "bytes": 5405
+ },
+ "부엌": {
+  "file": "bd80c5cc.m4a",
+  "kind": "final",
+  "dur": 0.397,
+  "bytes": 5874
+ },
+ "산": {
+  "file": "c0b0.m4a",
+  "kind": "final",
+  "dur": 0.435,
+  "bytes": 6296
+ },
+ "곧": {
+  "file": "ace7.m4a",
+  "kind": "final",
+  "dur": 0.225,
+  "bytes": 5165
+ },
+ "옷": {
+  "file": "c637.m4a",
+  "kind": "final",
+  "dur": 0.215,
+  "bytes": 5152
+ },
+ "있다": {
+  "file": "c788b2e4.m4a",
+  "kind": "final",
+  "dur": 0.56,
+  "bytes": 6637
+ },
+ "낮": {
+  "file": "b0ae.m4a",
+  "kind": "final",
+  "dur": 0.261,
+  "bytes": 5522
+ },
+ "꽃": {
+  "file": "af43.m4a",
+  "kind": "final",
+  "dur": 0.235,
+  "bytes": 5197
+ },
+ "끝": {
+  "file": "b05d.m4a",
+  "kind": "final",
+  "dur": 0.236,
+  "bytes": 5355
+ },
+ "달": {
+  "file": "b2ec.m4a",
+  "kind": "final",
+  "dur": 0.399,
+  "bytes": 5846
+ },
+ "밤": {
+  "file": "bc24.m4a",
+  "kind": "final",
+  "dur": 0.404,
+  "bytes": 5790
+ },
+ "밥": {
+  "file": "bc25.m4a",
+  "kind": "final",
+  "dur": 0.269,
+  "bytes": 5432
+ },
+ "앞": {
+  "file": "c55e.m4a",
+  "kind": "final",
+  "dur": 0.21,
+  "bytes": 5083
+ },
+ "방": {
+  "file": "bc29.m4a",
+  "kind": "final",
+  "dur": 0.399,
+  "bytes": 5709
+ },
+ "넋": {
+  "file": "b10b.m4a",
+  "kind": "final",
+  "dur": 0.259,
+  "bytes": 5558
+ },
+ "앉다": {
+  "file": "c549b2e4.m4a",
+  "kind": "final",
+  "dur": 0.548,
+  "bytes": 6515
+ },
+ "많다": {
+  "file": "b9ceb2e4.m4a",
+  "kind": "final",
+  "dur": 0.624,
+  "bytes": 7003
+ },
+ "읽다": {
+  "file": "c77db2e4.m4a",
+  "kind": "final",
+  "dur": 0.553,
+  "bytes": 6609
+ },
+ "삶": {
+  "file": "c0b6.m4a",
+  "kind": "final",
+  "dur": 0.386,
+  "bytes": 6028
+ },
+ "넓다": {
+  "file": "b113b2e4.m4a",
+  "kind": "final",
+  "dur": 0.6,
+  "bytes": 6641
+ },
+ "외곬": {
+  "file": "c678acec.m4a",
+  "kind": "final",
+  "dur": 0.552,
+  "bytes": 6543
+ },
+ "핥다": {
+  "file": "d565b2e4.m4a",
+  "kind": "final",
+  "dur": 0.627,
+  "bytes": 6950
+ },
+ "읊다": {
+  "file": "c74ab2e4.m4a",
+  "kind": "final",
+  "dur": 0.542,
+  "bytes": 6462
+ },
+ "싫다": {
+  "file": "c2ebb2e4.m4a",
+  "kind": "final",
+  "dur": 0.709,
+  "bytes": 7360
+ },
+ "없다": {
+  "file": "c5c6b2e4.m4a",
+  "kind": "final",
+  "dur": 0.543,
+  "bytes": 6448
+ },
+ "받는": {
+  "file": "bc1bb294.m4a",
+  "kind": "rule",
+  "dur": 0.59,
+  "bytes": 6421
+ },
+ "신라": {
+  "file": "c2e0b77c.m4a",
+  "kind": "rule",
+  "dur": 0.645,
+  "bytes": 7053
+ },
+ "놓고": {
+  "file": "b193ace0.m4a",
+  "kind": "rule",
+  "dur": 0.575,
+  "bytes": 7213
+ },
+ "국밥": {
+  "file": "ad6dbc25.m4a",
+  "kind": "rule",
+  "dur": 0.531,
+  "bytes": 6423
+ },
+ "안녕하세요.": {
+  "file": "c548b155d558c138c694002e.m4a",
+  "kind": "sentence",
+  "dur": 1.051,
+  "bytes": 8519
+ },
+ "제 이름은 민입니다.": {
+  "file": "c81cc774b984c740bbfcc785b2c8b2e4002e.m4a",
+  "kind": "sentence",
+  "dur": 1.543,
+  "bytes": 11663
+ },
+ "저는 학생입니다.": {
+  "file": "c800b294d559c0ddc785b2c8b2e4002e.m4a",
+  "kind": "sentence",
+  "dur": 1.433,
+  "bytes": 11223
+ },
+ "저는 베트남 사람입니다.": {
+  "file": "c800b294bca0d2b8b0a8c0acb78cc785b2c8b2e4002e.m4a",
+  "kind": "sentence",
+  "dur": 2.013,
+  "bytes": 13555
+ },
+ "한국어를 공부합니다.": {
+  "file": "d55cad6dc5b4b97cacf5bd80d569b2c8b2e4002e.m4a",
+  "kind": "sentence",
+  "dur": 1.724,
+  "bytes": 12162
+ },
+ "반갑습니다.": {
+  "file": "bc18ac11c2b5b2c8b2e4002e.m4a",
+  "kind": "sentence",
+  "dur": 1.125,
+  "bytes": 9676
+ }
+}

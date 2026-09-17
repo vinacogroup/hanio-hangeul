@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="vi">
+<head><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob: https:; script-src 'unsafe-inline' 'unsafe-eval' data: blob: https:; style-src 'unsafe-inline' data: blob: https:; font-src data: blob: https:; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:; connect-src data: blob: https:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hanway – Chặng 0: Đọc được tiếng Hàn</title>
+<style>
+:root{
+  --red:#bf1a2c;--red2:#dc3f52;--ink:#172033;--muted:#667085;--line:#e7eaf0;--bg:#f6f8fb;--card:#fff;
+  --green:#14804a;--amber:#b55d0b;--blue:#2764c5;--purple:#6e48c7;--softred:#fff1f3;--softblue:#eef5ff;--softgreen:#edf9f2;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+button,input,select{font:inherit}.hidden{display:none!important}
+.app{display:grid;grid-template-columns:310px minmax(0,1fr);min-height:100vh}
+.side{background:#fff;border-right:1px solid var(--line);padding:18px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{display:flex;gap:12px;align-items:center}.logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;display:grid;place-items:center;font-weight:900;box-shadow:0 10px 24px rgba(191,26,44,.22)}
+.brand h1{font-size:16px;margin:0}.brand p{font-size:12px;color:var(--muted);margin:3px 0 0}
+.studentBox{margin-top:16px;padding:14px;border:1px solid var(--line);border-radius:18px;background:#fbfcfe}
+.studentBox label{display:block;font-size:12px;font-weight:800;margin:8px 0 5px}.studentBox input{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px 11px;background:#fff}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:10px 13px;font-weight:800;cursor:pointer}.btn.red{background:var(--red);color:#fff}.btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}.btn.green{background:var(--green);color:#fff}.btn:disabled{opacity:.45;cursor:not-allowed}
+.progressCard{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:18px}.progressTop{display:flex;justify-content:space-between;gap:10px;font-size:12px;font-weight:800}.bar{height:10px;background:#edf0f4;border-radius:99px;overflow:hidden;margin-top:9px}.bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red),#ef6b79);transition:.25s}
+.navTitle{font-size:12px;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.06em;margin:16px 4px 8px}.journey{display:grid;gap:7px}.stageBtn{width:100%;border:1px solid transparent;background:transparent;border-radius:14px;padding:10px;text-align:left;cursor:pointer;display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;color:var(--ink)}.stageBtn:hover{background:#f7f8fa}.stageBtn.active{background:var(--softred);border-color:#ffd5dc}.stageBtn.locked{opacity:1}.stageNo{width:34px;height:34px;border-radius:11px;background:#eef1f5;display:grid;place-items:center;font-weight:900}.stageBtn.active .stageNo{background:var(--red);color:#fff}.stageBtn.done .stageNo{background:var(--green);color:#fff}.stageText strong{display:block;font-size:13px}.stageText small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.tick{font-weight:900;color:var(--green)}
+.main{padding:24px}.shell{max-width:1180px;margin:0 auto}.top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:16px}.top h2{margin:0;font-size:clamp(22px,3vw,36px)}.top p{margin:7px 0 0;color:var(--muted);max-width:760px}.teacherToggle{white-space:nowrap}
+.hero{border-radius:28px;padding:22px;background:linear-gradient(135deg,#fff 0,#fff6f7 58%,#eef5ff 100%);border:1px solid #fff;box-shadow:0 16px 40px rgba(26,33,52,.06);margin-bottom:16px}.heroHead{display:flex;justify-content:space-between;gap:16px;align-items:center}.eyebrow{display:inline-flex;padding:7px 10px;border-radius:99px;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:900;color:var(--red)}.hero h3{font-size:28px;margin:10px 0 6px}.hero p{margin:0;color:var(--muted)}.mastery{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.mastery span{padding:8px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:800}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 10px 28px rgba(26,33,52,.05)}.card h4{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted)}
+.symbolGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:10px;margin-top:14px}.symbol{border:1px solid var(--line);background:#fff;border-radius:18px;padding:14px 8px;text-align:center;cursor:pointer;min-height:104px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px}.symbol:hover{border-color:#f0a7b2;background:#fffafb}.symbol b{font-size:32px;line-height:1}.symbol small{font-size:11px;color:var(--muted)}
+.callout{margin-top:12px;padding:13px 14px;border-radius:16px;background:var(--softblue);border:1px solid #dce9ff;color:#284e83;font-size:13px}.warn{background:#fff7e8;border-color:#ffe0aa;color:#7a4a05}.ok{background:var(--softgreen);border-color:#cfeeda;color:#17623c}
+.practice{margin-top:16px}.questionBox{padding:18px;border-radius:20px;background:#fbfcfe;border:1px solid var(--line)}.prompt{font-weight:900;font-size:18px}.prompt.big{font-size:36px;text-align:center;padding:8px 0}.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}.choice{border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px;font-weight:800;cursor:pointer}.choice:hover{border-color:#cfd7e3}.choice.correct{background:#edf9f2;border-color:#a6dfbd;color:#17623c}.choice.wrong{background:#fff1f3;border-color:#ffbcc8;color:#8b1930}.feedback{min-height:26px;margin-top:10px;font-weight:800;font-size:13px}
+.lessonNav{display:flex;justify-content:space-between;gap:10px;margin-top:16px}.lessonNav .btn{min-width:130px}
+.teacherPanel{margin-bottom:16px;padding:18px;border-radius:22px;background:#151b2c;color:#fff}.teacherPanel h3{margin:0 0 8px}.teacherPanel p{color:#c9d1df;margin:0}.teacherStats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.stat{padding:12px;border-radius:15px;background:#20283b}.stat b{display:block;font-size:22px}.stat small{color:#aeb8c8}.teacherTable{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}.teacherTable th,.teacherTable td{padding:9px;border-bottom:1px solid #313a4e;text-align:left}.teacherTable th{color:#aeb8c8}.teacherActions{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.readBox{margin-top:12px;padding:18px;border:1px dashed #cfd7e3;border-radius:18px;background:#fbfcfe}.readText{font-size:27px;line-height:1.9;font-weight:800;word-break:keep-all}.timer{display:flex;gap:8px;align-items:center;margin-top:12px}.timer strong{font-size:24px}.inputLine{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px;margin-top:8px}
+.tableWrap{overflow:auto;margin-top:12px}table.learn{width:100%;border-collapse:collapse;font-size:13px}table.learn th,table.learn td{border-bottom:1px solid var(--line);padding:9px;text-align:left}table.learn th{background:#fafbfc}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+@media(max-width:920px){.app{grid-template-columns:1fr}.side{position:relative;height:auto;border-right:0;border-bottom:1px solid var(--line)}.journey{grid-template-columns:repeat(2,minmax(0,1fr))}.main{padding:16px}.grid2{grid-template-columns:1fr}.teacherStats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.journey{grid-template-columns:1fr}.choices{grid-template-columns:1fr}.top{flex-direction:column}.heroHead{align-items:flex-start;flex-direction:column}.symbolGrid{grid-template-columns:repeat(3,1fr)}.symbol{min-height:88px}.symbol b{font-size:28px}.teacherStats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><div class="logo">H</div><div><h1>Chặng 0 – Đọc được tiếng Hàn</h1><p>Giáo trình nhập môn Hangul</p></div></div>
+    <div class="navTitle" id="navTitle">Lộ trình học</div>
+    <div class="journey" id="journey"></div>
+  </aside>
+
+  <main class="main"><div class="shell">
+    <div class="top"><div><h2>Chặng 0 – Đọc được tiếng Hàn</h2></div></div>
+
+    <section class="hero" id="lessonHero">
+      <div class="heroHead"><div><span class="eyebrow" id="stageEyebrow">Màn 1/24</span><h3 id="stageTitle">Cách ghép chữ Hàn</h3><p id="stageDesc"></p></div></div>
+      <div class="mastery" id="mastery"></div>
+    </section>
+
+    <div id="lessonContent"></div>
+
+    <div class="lessonNav"><button class="btn ghost" id="prevBtn">← Màn trước</button><button class="btn red" id="nextBtn">Màn tiếp →</button></div>
+  </div></main>
+</div>
+<script>
+(function(){
+const VOWELS = [
+  ['ㅏ','아'],['ㅑ','야'],['ㅓ','어'],['ㅕ','여'],['ㅗ','오'],['ㅛ','요'],['ㅜ','우'],['ㅠ','유'],['ㅡ','으'],['ㅣ','이'],
+  ['ㅐ','애'],['ㅒ','얘'],['ㅔ','에'],['ㅖ','예'],['ㅘ','와'],['ㅙ','왜'],['ㅚ','외'],['ㅝ','워'],['ㅞ','웨'],['ㅟ','위'],['ㅢ','의']
+];
+const VOWEL_G1 = VOWELS.filter(x=>['ㅏ','ㅓ','ㅗ','ㅜ','ㅡ','ㅣ'].includes(x[0]));
+const VOWEL_G2 = VOWELS.filter(x=>['ㅑ','ㅕ','ㅛ','ㅠ'].includes(x[0]));
+const VOWEL_G3 = VOWELS.filter(x=>['ㅐ','ㅔ','ㅒ','ㅖ'].includes(x[0]));
+const VOWEL_G4 = VOWELS.filter(x=>['ㅘ','ㅙ','ㅚ'].includes(x[0]));
+const VOWEL_G5 = VOWELS.filter(x=>['ㅝ','ㅞ','ㅟ'].includes(x[0]));
+const VOWEL_G6 = VOWELS.filter(x=>['ㅢ'].includes(x[0]));
+const CONS_PLAIN_1 = [['ㄱ','가'],['ㄷ','다'],['ㅂ','바'],['ㅅ','사'],['ㅈ','자']];
+const CONS_PLAIN_2 = [['ㄴ','나'],['ㄹ','라'],['ㅁ','마'],['ㅇ','아'],['ㅎ','하']];
+const CONS_ASPIRATE = [['ㅋ','카'],['ㅌ','타'],['ㅍ','파'],['ㅊ','차']];
+const CONS_TENSE = [['ㄲ','까'],['ㄸ','따'],['ㅃ','빠'],['ㅆ','싸'],['ㅉ','짜']];
+const CONS_BASIC = [...CONS_PLAIN_1,...CONS_PLAIN_2,...CONS_ASPIRATE];
+const FINALS_SINGLE = [['ㄱ','악'],['ㄲ','밖'],['ㅋ','부엌'],['ㄴ','산'],['ㄷ','곧'],['ㅅ','옷'],['ㅆ','있다'],['ㅈ','낮'],['ㅊ','꽃'],['ㅌ','끝'],['ㅎ','좋다'],['ㄹ','달'],['ㅁ','밤'],['ㅂ','밥'],['ㅍ','앞'],['ㅇ','방']];
+const FINALS_DOUBLE = [['ㄳ','넋'],['ㄵ','앉다'],['ㄶ','많다'],['ㄺ','읽다'],['ㄻ','삶'],['ㄼ','넓다'],['ㄽ','외곬'],['ㄾ','핥다'],['ㄿ','읊다'],['ㅀ','싫다'],['ㅄ','없다']];
+const stages = [
+ {t:'Cấu tạo chữ Hàn',s:'Hiểu khối âm tiết',d:'Hiểu cách phụ âm và nguyên âm ghép thành một khối. Đây là cơ chế nền để tự đọc chữ mới.',kind:'blocks',goal:['Nhận ra vị trí phụ âm đầu','Nhận ra vị trí nguyên âm','Hiểu có thể có phụ âm cuối']},
+ {t:'Nguyên âm – Phần 1',s:'ㅏ ㅓ ㅗ ㅜ ㅡ ㅣ',d:'6 nguyên âm nền tảng: ㅏ, ㅓ, ㅗ, ㅜ, ㅡ, ㅣ.',kind:'symbols',items:VOWEL_G1,goal:['Nhận diện mặt chữ','Nghe và phân biệt','Đọc trực tiếp']},
+ {t:'Nguyên âm – Phần 2',s:'ㅑ ㅕ ㅛ ㅠ',d:'4 nguyên âm có âm y: ㅑ, ㅕ, ㅛ, ㅠ.',kind:'symbols',items:VOWEL_G2,goal:['Nhận diện mặt chữ','Nghe và phân biệt','Đọc trực tiếp']},
+ {t:'Nguyên âm – Phần 3',s:'ㅐ ㅔ ㅒ ㅖ',d:'4 nguyên âm: ㅐ, ㅔ, ㅒ, ㅖ. Trong tiếng Hàn hiện đại, một số âm có thể nghe rất gần nhau.',kind:'symbols',items:VOWEL_G3,goal:['Nhận diện mặt chữ','Nghe và phân biệt','Đọc trực tiếp']},
+ {t:'Nguyên âm – Phần 4',s:'ㅘ ㅙ ㅚ',d:'Học nhóm nguyên âm ghép từ ㅗ.',kind:'symbols',items:VOWEL_G4,goal:['Nhận ra cấu tạo','Đọc được âm tiết mới']},
+ {t:'Nguyên âm – Phần 5',s:'ㅝ ㅞ ㅟ',d:'Học nhóm nguyên âm ghép từ ㅜ.',kind:'symbols',items:VOWEL_G5,goal:['Nhận ra cấu tạo','Đọc được âm tiết mới']},
+ {t:'Nguyên âm – Phần 6',s:'ㅢ + tổng hợp 21 nguyên âm',d:'Học ㅢ và ôn tổng hợp đủ 21 nguyên âm hiện đại.',kind:'allVowels',items:VOWELS,goal:['Đủ 21 nguyên âm','Nhận diện và đọc trực tiếp']},
+ {t:'Phụ âm thường – Phần 1',s:'ㄱ ㄷ ㅂ ㅅ ㅈ',d:'5 phụ âm thường có cặp bật hơi và cặp căng tương ứng. Học trước để làm cơ sở nhận biết các nhóm sau.',kind:'symbols',items:CONS_PLAIN_1,goal:['Nhìn – nghe – ghép','Đọc âm tiết mới','Làm nền cho nhóm bật hơi và căng']},
+ {t:'Phụ âm thường – Phần 2',s:'ㄴ ㄹ ㅁ ㅇ ㅎ',d:'5 phụ âm thường không có cặp bật hơi hay cặp căng. Học riêng để tránh nhầm lẫn với nhóm Phần 1.',kind:'symbols',items:CONS_PLAIN_2,goal:['Nhận diện nhanh','Ghép với nhiều nguyên âm','Không có cặp bật hơi hay căng']},
+ {t:'Phụ âm bật hơi',s:'ㅋ ㅌ ㅍ ㅊ',d:'4 phụ âm bật hơi, tương ứng với ㄱ, ㄷ, ㅂ, ㅈ ở Phần 1. Hoàn tất đủ 14 phụ âm cơ bản.',kind:'symbols',items:CONS_ASPIRATE,goal:['Đủ 14 phụ âm cơ bản','Ghép cặp với ㄱ ㄷ ㅂ ㅈ','Nghe ra hơi bật']},
+ {t:'Phụ âm căng',s:'ㄲ ㄸ ㅃ ㅆ ㅉ',d:'5 phụ âm căng, tương ứng với ㄱ, ㄷ, ㅂ, ㅅ, ㅈ ở Phần 1. Hoàn tất đủ 19 phụ âm dùng ở đầu âm tiết.',kind:'symbols',items:CONS_TENSE,goal:['Đủ 19 phụ âm đầu','Ghép cặp với ㄱ ㄷ ㅂ ㅅ ㅈ','Phân biệt thường – bật hơi – căng']},
+ {t:'Ghép âm tiết không có 받침',s:'가 너 두 뫼 위 …',d:'Luyện ghép toàn bộ phụ âm đầu với 21 nguyên âm. Học viên phải tự giải mã âm tiết chưa từng gặp.',kind:'blend',goal:['Ghép tự động','Không nhìn phiên âm','Đúng ≥ 85%']},
+ {t:'Cấu tạo 받침',s:'Phụ âm cuối',d:'Hiểu vị trí 받침 và cách một âm tiết có thể có phụ âm cuối.',kind:'finalIntro',goal:['Xác định đúng 받침','Đọc được âm tiết CVC']},
+ {t:'받침 đơn – đầy đủ',s:'16 cách viết, 7 âm cuối',d:'Học đầy đủ các phụ âm đơn có thể xuất hiện ở cuối âm tiết và quy về 7 âm cuối cơ bản.',kind:'finalSingle',items:FINALS_SINGLE,goal:['Biết mặt chữ cuối','Nhận ra 7 nhóm âm cuối']},
+ {t:'받침 kép – đầy đủ',s:'ㄳ ㄵ ㄶ ㄺ ㄻ ㄼ ㄽ ㄾ ㄿ ㅀ ㅄ',d:'Học đầy đủ 11 받침 kép và ví dụ từ thật.',kind:'finalDouble',items:FINALS_DOUBLE,goal:['Đủ 11 받침 kép','Nhận diện khi gặp trong từ']},
+ {t:'Nối âm',s:'받침 + ㅇ',d:'Khi âm tiết sau bắt đầu bằng ㅇ, phụ âm cuối thường nối sang âm tiết sau.',kind:'rule',ruleExamples:[['한국어','한구거'],['음악','으막'],['집에','지베'],['옷을','오슬']],goal:['Nhìn thấy điểm nối','Đọc liền được từ']},
+ {t:'Biến âm mũi',s:'ㄱ/ㄷ/ㅂ + ㄴ/ㅁ',d:'Luyện các trường hợp phụ âm cuối chuyển về âm mũi trước ㄴ hoặc ㅁ.',kind:'rule',ruleExamples:[['국물','궁물'],['받는','반는'],['십만','심만']],goal:['Nhận ra quy luật','Đọc đúng ví dụ mới']},
+ {t:'Quy tắc với ㄹ',s:'ㄴ + ㄹ / ㄹ + ㄴ',d:'Luyện các trường hợp thường gặp khi ㄴ và ㄹ đứng cạnh nhau.',kind:'rule',ruleExamples:[['신라','실라'],['설날','설랄'],['연락','열락']],goal:['Nhận ra ㄹ hóa','Đọc liền mạch']},
+ {t:'Ảnh hưởng của ㅎ',s:'Bật hơi và yếu hóa',d:'Luyện các trường hợp ㅎ làm âm sau bật hơi hoặc bị yếu đi trong phát âm.',kind:'rule',ruleExamples:[['좋다','조타'],['놓고','노코'],['많이','마니']],goal:['Nhận diện ㅎ trong chuỗi âm','Đọc đúng ví dụ']},
+ {t:'Căng hóa cơ bản',s:'받침 + phụ âm đầu',d:'Luyện một số mẫu thường gặp khiến phụ âm đầu sau 받침 chuyển sang âm căng.',kind:'rule',ruleExamples:[['학교','학꾜'],['국밥','국빱'],['먹다','먹따']],goal:['Nghe ra khác biệt','Không đọc tách từng âm tiết']},
+ {t:'Đọc từ thật – Phần 1',s:'Từ ngắn, cấu trúc quen',d:'Đọc các từ thật không cần học thuộc trước. Mục tiêu là giải mã trực tiếp từ chữ.',kind:'wordRead',words:['우유','오이','나무','바다','사과','학교','한국','사람','학생','이름','은행','전화'],goal:['Đúng ≥ 85%','Không dùng phiên âm']},
+ {t:'Đọc từ thật – Phần 2',s:'Từ có 받침 và biến âm',d:'Đọc từ có 받침, nối âm và quy tắc phát âm đã học.',kind:'wordRead',words:['한국어','음악','국물','설날','연락','좋다','학교','먹다','집에','옷을','많이','십만'],goal:['Áp dụng quy tắc','Không đánh vần từng chữ quá lâu']},
+ {t:'Đọc từ chưa từng gặp',s:'Kiểm tra năng lực giải mã',d:'Đọc các chuỗi âm tiết mới để chứng minh học viên thật sự biết ghép chữ, không chỉ nhớ từ.',kind:'pseudo',words:['머바','누다','기모','퉤누','쟈보','뢰미','쒀나','뷔더','귬바','쫘리','듀헤','프외'],goal:['Đúng ≥ 80%','Phản ứng trong thời gian hợp lý']},
+ {t:'Đọc cụm và câu',s:'Từ chữ → phản xạ',d:'Đọc các cụm và câu ngắn gần với nội dung phỏng vấn sau này.',kind:'sentences',sentences:['안녕하세요.','제 이름은 민입니다.','저는 학생입니다.','저는 베트남 사람입니다.','한국어를 공부합니다.','반갑습니다.'],goal:['Đọc liền câu','Không dừng quá lâu giữa âm tiết']},
+ {t:'Cổng cuối Chặng 0',s:'Độ đúng + tốc độ + câu mới',d:'Bài kiểm tra cuối: đọc nội dung chưa học thuộc, đo độ chính xác và tốc độ. Dùng để kiểm tra mức độ sẵn sàng trước khi vào Bài 1.',kind:'final',goal:['Độ chính xác ≥ 80%','Tốc độ ≥ 30 âm tiết/phút','Đọc được câu mới']}
+];
+
+const $=s=>document.querySelector(s); const $$=s=>[...document.querySelectorAll(s)];
+let current=0, timerInt=null, seconds=60;
+const sessionProgress={done:[],scores:{},accuracy:0,speed:0};
+function completed(i){return false}
+function isUnlocked(i){return true}
+function updateSessionProgress(){}
+const SPEAK_RATE=.6, SPEAK_RATE_DRILL=.45;
+// macOS lists eight ko-KR novelty voices (Eddy, Flo, Grandma, …) that emit almost no audio for
+// Korean. Without an explicit pick the browser takes the first match, which is one of those.
+// Order best-first; anything not named here is a last resort.
+const VOICE_PREFERENCE=['Yuna','Google 한국의','Google Korean','Microsoft SunHi','Microsoft Heami','Kyuri','Sora'];
+const VOICE_REJECT=/^(Eddy|Flo|Grandma|Grandpa|Reed|Rocko|Sandy|Shelley|Bells|Boing|Bubbles|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox)\b/i;
+let voiceCache=null;
+function koreanVoice(){if(voiceCache)return voiceCache;
+ const all=speechSynthesis.getVoices().filter(v=>/^ko/i.test(v.lang));if(!all.length)return null;
+ for(const name of VOICE_PREFERENCE){const hit=all.find(v=>v.name===name||v.name.startsWith(name));if(hit)return voiceCache=hit}
+ return voiceCache=all.find(v=>!VOICE_REJECT.test(v.name))||all[0]}
+// Chrome fills the voice list asynchronously; without this a first click can fall back to a bad voice.
+if('speechSynthesis'in window){speechSynthesis.getVoices();speechSynthesis.addEventListener('voiceschanged',()=>{voiceCache=null;koreanVoice()})}
+function utter(text,rate){const u=new SpeechSynthesisUtterance(text);u.lang='ko-KR';u.rate=rate;const v=koreanVoice();if(v)u.voice=v;return u}
+// Pre-generated clips give every device the same voice. They cannot cover everything: the blend
+// stage builds random syllables from 399 combinations, so TTS stays as the fallback.
+const CLIP_DIR='audio/', CLIP_GAP_MS=260;
+// Inlined rather than fetched: the page's CSP connect-src omits 'self', so fetch() to the
+// local origin is blocked. media-src does allow 'self', so playing the files still works.
+const CLIP_INDEX={"가":"ac00.m4a","까":"ae4c.m4a","나":"b098.m4a","다":"b2e4.m4a","따":"b530.m4a","라":"b77c.m4a","마":"b9c8.m4a","바":"bc14.m4a","빠":"be60.m4a","사":"c0ac.m4a","싸":"c2f8.m4a","아":"c544.m4a","자":"c790.m4a","짜":"c9dc.m4a","차":"cc28.m4a","카":"ce74.m4a","타":"d0c0.m4a","파":"d30c.m4a","하":"d558.m4a","애":"c560.m4a","야":"c57c.m4a","얘":"c598.m4a","어":"c5b4.m4a","에":"c5d0.m4a","여":"c5ec.m4a","예":"c608.m4a","오":"c624.m4a","와":"c640.m4a","왜":"c65c.m4a","외":"c678.m4a","요":"c694.m4a","우":"c6b0.m4a","워":"c6cc.m4a","웨":"c6e8.m4a","위":"c704.m4a","유":"c720.m4a","으":"c73c.m4a","의":"c758.m4a","이":"c774.m4a","우유":"c6b0c720.m4a","오이":"c624c774.m4a","나무":"b098bb34.m4a","바다":"bc14b2e4.m4a","사과":"c0acacfc.m4a","학교":"d559ad50.m4a","한국":"d55cad6d.m4a","사람":"c0acb78c.m4a","학생":"d559c0dd.m4a","이름":"c774b984.m4a","은행":"c740d589.m4a","전화":"c804d654.m4a","한국어":"d55cad6dc5b4.m4a","음악":"c74cc545.m4a","국물":"ad6dbb3c.m4a","설날":"c124b0a0.m4a","연락":"c5f0b77d.m4a","좋다":"c88bb2e4.m4a","먹다":"ba39b2e4.m4a","집에":"c9d1c5d0.m4a","옷을":"c637c744.m4a","많이":"b9cec774.m4a","십만":"c2edb9cc.m4a","머바":"ba38bc14.m4a","누다":"b204b2e4.m4a","기모":"ae30baa8.m4a","퉤누":"d264b204.m4a","쟈보":"c7c8bcf4.m4a","뢰미":"b8b0bbf8.m4a","쒀나":"c480b098.m4a","뷔더":"bdd4b354.m4a","귬바":"adecbc14.m4a","쫘리":"cad8b9ac.m4a","듀헤":"b4c0d5e4.m4a","프외":"d504c678.m4a","악":"c545.m4a","밖":"bc16.m4a","부엌":"bd80c5cc.m4a","산":"c0b0.m4a","곧":"ace7.m4a","옷":"c637.m4a","있다":"c788b2e4.m4a","낮":"b0ae.m4a","꽃":"af43.m4a","끝":"b05d.m4a","달":"b2ec.m4a","밤":"bc24.m4a","밥":"bc25.m4a","앞":"c55e.m4a","방":"bc29.m4a","넋":"b10b.m4a","앉다":"c549b2e4.m4a","많다":"b9ceb2e4.m4a","읽다":"c77db2e4.m4a","삶":"c0b6.m4a","넓다":"b113b2e4.m4a","외곬":"c678acec.m4a","핥다":"d565b2e4.m4a","읊다":"c74ab2e4.m4a","싫다":"c2ebb2e4.m4a","없다":"c5c6b2e4.m4a","받는":"bc1bb294.m4a","신라":"c2e0b77c.m4a","놓고":"b193ace0.m4a","국밥":"ad6dbc25.m4a","안녕하세요.":"c548b155d558c138c694002e.m4a","제 이름은 민입니다.":"c81cc774b984c740bbfcc785b2c8b2e4002e.m4a","저는 학생입니다.":"c800b294d559c0ddc785b2c8b2e4002e.m4a","저는 베트남 사람입니다.":"c800b294bca0d2b8b0a8c0acb78cc785b2c8b2e4002e.m4a","한국어를 공부합니다.":"d55cad6dc5b4b97cacf5bd80d569b2c8b2e4002e.m4a","반갑습니다.":"bc18ac11c2b5b2c8b2e4002e.m4a"};
+function clipFor(text){const f=CLIP_INDEX[String(text).trim()];return f?CLIP_DIR+f:null}
+
+// One reusable element, so a new click replaces whatever is sounding instead of layering on it.
+// Resolves true when the clip actually sounded, false when it could not, so the caller can
+// fall back to TTS instead of leaving a dead button.
+let audioEl=null, playToken=0;
+function stopAudio(){playToken++;if(audioEl){audioEl.pause();audioEl.currentTime=0}}
+const CLIP_START_TIMEOUT_MS=1500;
+function playClip(src,token){return new Promise(resolve=>{
+ if(!audioEl){audioEl=new Audio();audioEl.preload='auto'}
+ let settled=false, timer=null;
+ const done=ok=>{if(settled)return;settled=true;clearTimeout(timer);
+  audioEl.onended=audioEl.onerror=audioEl.onplaying=null;resolve(ok)};
+ audioEl.onended=()=>done(true);
+ audioEl.onerror=()=>done(false);                      // 404 or unsupported codec
+ // If the file never even starts (stalled network, blocked media), give up and let TTS speak
+ // rather than leaving a silent button. Cancelled once playback is actually under way.
+ timer=setTimeout(()=>done(false),CLIP_START_TIMEOUT_MS);
+ audioEl.onplaying=()=>{clearTimeout(timer)};
+ audioEl.src=src;
+ audioEl.play().then(()=>{},()=>done(false));
+ if(token!==playToken)done(true)})}                    // superseded: caller must not re-speak
+
+// spell=true separates syllables so each letter stays audible. Only for letter drills:
+// real words must stay connected or the liaison and sound-change lessons teach the wrong thing.
+async function speak(text,spell){if(!('speechSynthesis'in window)){alert('Trình duyệt này chưa hỗ trợ đọc tiếng Hàn.');return}
+ speechSynthesis.cancel();stopAudio();
+ const token=playToken;
+ if(!spell){const clip=clipFor(text);
+  if(clip&&await playClip(clip,token))return;
+  if(token!==playToken)return;
+  speechSynthesis.speak(utter(text,SPEAK_RATE));return}
+ const syllables=[...String(text).trim()].filter(c=>c.trim());
+ for(let i=0;i<syllables.length;i++){
+  if(token!==playToken)return;                       // a newer click superseded this one
+  const s=syllables[i], clip=clipFor(s);
+  if(i)await new Promise(r=>setTimeout(r,CLIP_GAP_MS));
+  if(token!==playToken)return;
+  if(clip&&await playClip(clip,token))continue;
+  if(token!==playToken)return;
+  speechSynthesis.speak(utter(s,SPEAK_RATE_DRILL))}}
+function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function renderJourney(){const root=$('#journey');root.innerHTML='';stages.forEach((st,i)=>{const b=document.createElement('button');b.type='button';b.className='stageBtn'+(i===current?' active':'');b.disabled=false;b.setAttribute('aria-label','Mở màn '+(i+1)+': '+st.t);b.innerHTML=`<span class="stageNo">${i+1}</span><span class="stageText"><strong>${esc(st.t)}</strong><small>${esc(st.s)}</small></span>`;b.addEventListener('click',()=>{current=i;renderJourney();renderStage();window.scrollTo({top:0,behavior:'smooth'})});root.appendChild(b)})}
+function renderProgress(){}
+function masteryHtml(st){return (st.goal||[]).map(x=>`<span>✓ ${esc(x)}</span>`).join('')}
+function symbolCards(items){return `<div class="symbolGrid">${items.map(([a,b])=>`<button type="button" class="symbol" data-speak="${esc(b)}"><b>${a}</b><small>Nhấn để nghe</small></button>`).join('')}</div>`}
+function quizFromPairs(items, count=5){const qs=shuffle(items).slice(0,Math.min(count,items.length));const payload=encodeURIComponent(JSON.stringify(qs));return `<div class="practice"><div class="card"><h4>Kiểm tra nhận diện</h4><p>Nghe âm rồi chọn chữ đúng.</p><div id="quizArea" style="margin-top:12px"></div></div></div><div id="quizData" data-json="${payload}" hidden></div>`}
+function baseCards(st,inner){return `<section class="card">${inner}</section>`}
+function renderStage(){
+ const st=stages[current];$('#stageEyebrow').textContent=`Màn ${current+1}/${stages.length}`;$('#stageTitle').textContent=st.t;$('#stageDesc').textContent=st.d;$('#mastery').innerHTML=masteryHtml(st);
+ let html='';
+ if(st.kind==='blocks') html=baseCards(st,`<div class="readBox"><div class="readText center">ㄱ + ㅏ → 가<br>ㄴ + ㅗ → 노<br>ㅁ + ㅜ + ㄹ → 물</div></div><div class="callout">Nguyên âm dọc như ㅏ, ㅓ, ㅣ thường đứng bên phải phụ âm đầu. Nguyên âm ngang như ㅗ, ㅜ, ㅡ thường nằm bên dưới.</div>`)+simpleCheck('Khối nào có phụ âm cuối 받침?',['가','노','물','마'],'물');
+ else if(st.kind==='symbols') html=baseCards(st,symbolCards(st.items))+quizFromPairs(st.items);
+ else if(st.kind==='allVowels') html=baseCards(st,`<p>Toàn bộ 21 nguyên âm phải được nhận diện:</p>${symbolCards(st.items)}`)+quizFromPairs(st.items,10);
+ else if(st.kind==='blend') html=blendPractice();
+ else if(st.kind==='finalIntro') html=baseCards(st,`<div class="readBox"><div class="readText center">가 → 각<br>나 → 난<br>마 → 말</div></div><div class="callout">받침 là phụ âm nằm ở đáy khối âm tiết. Một khối có thể có hoặc không có 받침.</div>`)+simpleCheck('Âm tiết nào có 받침?',['나','가','말','모'],'말');
+ else if(st.kind==='finalSingle') html=tableFinalSingle(st.items)+simpleCheck('Trong từ “밥”, 받침 là chữ nào?',['ㅂ','ㅏ','ㅃ','ㅇ'],'ㅂ');
+ else if(st.kind==='finalDouble') html=tableFinalDouble(st.items)+simpleCheck('받침 kép nào xuất hiện trong “없다”?',['ㄳ','ㅄ','ㄺ','ㄵ'],'ㅄ');
+ else if(st.kind==='rule') html=rulePractice(st.ruleExamples);
+ else if(st.kind==='wordRead'||st.kind==='pseudo') html=wordReader(st.words, st.kind==='pseudo');
+ else if(st.kind==='sentences') html=sentenceReader(st.sentences);
+ else if(st.kind==='final') html=finalGate();
+ $('#lessonContent').innerHTML=html; bindDynamic(st); $('#prevBtn').disabled=current===0;$('#prevBtn').textContent='← Màn trước';$('#nextBtn').textContent=current===stages.length-1?'Đã ở màn cuối':'Màn tiếp →';$('#nextBtn').disabled=current===stages.length-1;$('#nextBtn').onclick=()=>{if(current<stages.length-1){current++;renderJourney();renderStage();window.scrollTo({top:0,behavior:'smooth'})}};$('#prevBtn').onclick=()=>{if(current>0){current--;renderJourney();renderStage();window.scrollTo({top:0,behavior:'smooth'})}};
+}
+function simpleCheck(q,opts,ans){return `<div class="practice"><div class="card"><h4>Kiểm tra nhanh</h4><div class="questionBox"><div class="prompt">${esc(q)}</div><div class="choices">${opts.map(x=>`<button type="button" class="choice simpleChoice" data-answer="${esc(ans)}" data-value="${esc(x)}">${esc(x)}</button>`).join('')}</div><div class="feedback" id="simpleFb"></div></div></div></div>`}
+function blendPractice(){const cons=[...CONS_BASIC,...CONS_TENSE].map(x=>x[0]);const vows=VOWELS.map(x=>x[0]);return `<div class="grid2"><div class="card"><h4>Ghép âm tiết</h4><p>Nhấn “Tạo âm tiết” để luyện chữ mới. Không dùng phiên âm.</p><div class="readBox"><div class="readText center" id="blendTarget">가</div></div><div class="row" style="margin-top:12px"><button class="btn ghost" id="blendSpeak">🔊 Nghe</button><button class="btn red" id="blendNew">Tạo âm tiết</button></div></div><div class="card"><h4>Kiểm tra</h4><p>Tự đọc âm tiết đang hiện. Sau đó nhấn nghe để tự đối chiếu. Hoàn thành 12 lượt để qua màn.</p><div class="callout ok"><b id="blendCount">0</b>/12 lượt đã hoàn thành.</div><button class="btn green" id="blendDone" style="margin-top:12px">Tôi đã đọc và kiểm tra lượt này</button></div></div><div id="blendData" data-cons='${JSON.stringify(cons)}' data-vows='${JSON.stringify(vows)}'></div>`}
+function tableFinalSingle(items){const groups=[['Âm cuối [k]','ㄱ ㄲ ㅋ'],['Âm cuối [n]','ㄴ'],['Âm cuối [t]','ㄷ ㅅ ㅆ ㅈ ㅊ ㅌ ㅎ'],['Âm cuối [l]','ㄹ'],['Âm cuối [m]','ㅁ'],['Âm cuối [p]','ㅂ ㅍ'],['Âm cuối [ng]','ㅇ']];return `<div class="grid2"><div class="card"><h4>Toàn bộ 받침 đơn xuất hiện trong chữ viết</h4>${symbolCards(items)}</div><div class="card"><h4>7 âm cuối cơ bản</h4><div class="tableWrap"><table class="learn"><thead><tr><th>Nhóm âm cuối</th><th>Các chữ</th></tr></thead><tbody>${groups.map(g=>`<tr><td>${g[0]}</td><td class="mono">${g[1]}</td></tr>`).join('')}</tbody></table></div><div class="callout">Một chữ viết ở 받침 không phải lúc nào cũng giữ nguyên âm của nó. Vì vậy cần học theo 7 nhóm âm cuối.</div></div></div>`}
+function tableFinalDouble(items){return `<div class="card"><h4>11 받침 kép – học đầy đủ</h4><div class="tableWrap"><table class="learn"><thead><tr><th>받침 kép</th><th>Ví dụ</th><th>Nghe ví dụ</th></tr></thead><tbody>${items.map(x=>`<tr><td style="font-size:24px;font-weight:900">${x[0]}</td><td>${x[1]}</td><td><button type="button" class="btn ghost speakMini" data-speak="${x[1]}">🔊</button></td></tr>`).join('')}</tbody></table></div><div class="callout warn">Ở giai đoạn này học viên cần nhận diện đầy đủ 11 받침 kép. Cách phát âm cụ thể sẽ được củng cố khi gặp trong từ và quy tắc nối âm.</div></div>`}
+function rulePractice(ex){return `<div class="grid2"><div class="card"><h4>Ví dụ bắt buộc</h4>${ex.map(([a,b])=>`<div class="readBox"><div class="row" style="justify-content:space-between"><strong style="font-size:24px">${a}</strong><button type="button" class="btn ghost speakMini" data-speak="${a}">🔊 Nghe</button></div><p style="margin-top:8px">Cách đọc gần đúng theo quy tắc: <b>${b}</b></p></div>`).join('')}</div><div class="card"><h4>Luyện tập</h4><p>Đọc từng từ trước khi nghe. Nếu lần đầu đọc sai, đánh dấu để luyện lại 3 lần.</p><div class="callout ok">Mục tiêu không phải thuộc lòng cách đọc của từng từ, mà nhận ra quy tắc khi gặp từ mới.</div><button class="btn green" id="ruleDone" style="margin-top:12px">Đã kiểm tra các ví dụ</button></div></div>`}
+function wordReader(words,pseudo){return `<div class="grid2"><div class="card"><h4>${pseudo?'Từ chưa từng gặp':'Danh sách luyện đọc'}</h4><div class="symbolGrid">${words.map(w=>`<button type="button" class="symbol wordCard" data-word="${w}"><b style="font-size:24px">${w}</b><small>Đọc trước → nhấn nghe</small></button>`).join('')}</div></div><div class="card"><h4>Kiểm tra độc lập</h4><p>${pseudo?'Các chuỗi này không cần có nghĩa. Nếu đọc được, học viên đã hiểu cơ chế giải mã chữ.':'Không học thuộc trước. Đọc bằng cách nhìn chữ và giải mã trực tiếp.'}</p><div class="callout">Đọc trước rồi nhấn vào từng từ để nghe đối chiếu.</div><div class="readBox"><b id="wordCount">0</b> / ${words.length} từ đã kiểm tra.</div><button class="btn green" id="wordDone" style="margin-top:12px" disabled>Đã kiểm tra</button></div></div>`}
+function sentenceReader(sentences){return `<div class="card"><h4>Đọc cụm và câu ngắn</h4><p>Đọc từng câu trước, sau đó mới nhấn nghe.</p>${sentences.map(s=>`<div class="readBox"><div class="row" style="justify-content:space-between"><div class="readText" style="font-size:24px">${s}</div><button type="button" class="btn ghost speakMini" data-speak="${s}">🔊</button></div></div>`).join('')}<button class="btn green" id="sentenceDone" style="margin-top:12px">Đã kiểm tra toàn bộ câu</button></div>`}
+function finalGate(){const text='안녕하세요. 저는 베트남 사람입니다. 제 이름은 민입니다. 저는 학생입니다. 한국어를 공부합니다. 만나서 반갑습니다.';return `<div class="grid2"><div class="card"><h4>Bài đọc cuối chặng</h4><p>Đây là đoạn kiểm tra. Học viên đọc trước khi nghe. Đọc trước khi nhấn nghe mẫu.</p><div class="readBox"><div class="readText">${text}</div></div><div class="row" style="margin-top:12px"><button class="btn ghost" id="finalSpeak">🔊 Nghe sau khi đọc</button></div></div><div class="card"><h4>Đo 60 giây</h4><p>Nhấn bắt đầu, đọc liên tục. Sau 60 giây nhập số âm tiết đọc đúng.</p><div class="timer"><strong id="timeLeft">60</strong><span>giây</span></div><button class="btn red" id="startTimer">Bắt đầu 60 giây</button><label style="display:block;margin-top:12px;font-weight:800">Số âm tiết đọc đúng trong 60 giây</label><input class="inputLine" id="speedInput" type="number" min="0" max="300" placeholder="Ví dụ: 36"><label style="display:block;margin-top:12px;font-weight:800">Độ chính xác (%)</label><input class="inputLine" id="accuracyInput" type="number" min="0" max="100" placeholder="Ví dụ: 85"><button class="btn green" id="finalSubmit" style="margin-top:12px">Kiểm tra điều kiện vượt chặng</button><div class="feedback" id="finalFb"></div></div></div>`}
+function bindDynamic(st){
+ $$('.symbol[data-speak]').forEach(b=>b.addEventListener('click',()=>speak(b.dataset.speak,true)));
+ $$('.speakMini').forEach(b=>b.addEventListener('click',()=>speak(b.dataset.speak)));
+ $$('.wordCard').forEach(b=>b.addEventListener('click',()=>{speak(b.dataset.word);if(!b.dataset.done){b.dataset.done='1';b.style.borderColor='#9bd3b1';b.style.background='#f0faf4';updateWordCount()}}));
+ $$('.simpleChoice').forEach(b=>b.addEventListener('click',()=>{const ok=b.dataset.value===b.dataset.answer;$$('.simpleChoice').forEach(x=>x.disabled=true);b.classList.add(ok?'correct':'wrong');$('#simpleFb').textContent=ok?'Đúng. Màn đã đạt.':'Chưa đúng. Hãy xem lại rồi làm lại màn.';if(ok)markDone(current,100)}));
+ const qd=$('#quizData');if(qd)runPairQuiz(JSON.parse(decodeURIComponent(qd.dataset.json||'%5B%5D')));
+ if($('#blendNew'))bindBlend();
+ if($('#ruleDone'))$('#ruleDone').addEventListener('click',()=>markDone(current,90));
+ if($('#wordDone'))$('#wordDone').addEventListener('click',()=>markDone(current,90));
+ if($('#sentenceDone'))$('#sentenceDone').addEventListener('click',()=>markDone(current,90));
+ if($('#finalSpeak'))$('#finalSpeak').addEventListener('click',()=>speak('안녕하세요. 저는 베트남 사람입니다. 제 이름은 민입니다. 저는 학생입니다. 한국어를 공부합니다. 만나서 반갑습니다.'));
+ if($('#startTimer'))$('#startTimer').addEventListener('click',startTimer);
+ if($('#finalSubmit'))$('#finalSubmit').addEventListener('click',submitFinal);
+}
+function runPairQuiz(qs){let qi=0,correct=0;const area=$('#quizArea');function next(){if(qi>=qs.length){const pct=Math.round(correct/qs.length*100);area.innerHTML=`<div class="questionBox"><div class="prompt">Kết quả: ${correct}/${qs.length} – ${pct}%</div><div class="feedback">${pct>=80?'Kết quả tốt.':'Có thể luyện lại để tăng độ chính xác.'}</div><button class="btn ${pct>=80?'green':'red'}" id="quizEnd">${pct>=80?'Làm lại bài kiểm tra':'Làm lại'}</button></div>`;$('#quizEnd').onclick=()=>{renderStage()};return}const [char,audio]=qs[qi];const pool=shuffle(qs.map(x=>x[0]).filter(x=>x!==char)).slice(0,3);const opts=shuffle([char,...pool]);area.innerHTML=`<div class="questionBox"><div class="prompt">Nghe rồi chọn chữ đúng</div><button class="btn ghost" id="playQ" style="margin-top:10px">🔊 Nghe</button><div class="choices">${opts.map(x=>`<button type="button" class="choice qChoice" data-v="${x}">${x}</button>`).join('')}</div><div class="feedback" id="qFb"></div></div>`;$('#playQ').onclick=()=>speak(audio,true);$$('.qChoice').forEach(b=>b.onclick=()=>{const ok=b.dataset.v===char;if(ok){correct++;b.classList.add('correct');$('#qFb').textContent='Đúng.'}else{b.classList.add('wrong');$('#qFb').textContent='Chưa đúng.'}$$('.qChoice').forEach(x=>x.disabled=true);setTimeout(()=>{qi++;next()},650)})}next()}
+function bindBlend(){let count=0;const data=$('#blendData');const cons=JSON.parse(data.dataset.cons),vows=JSON.parse(data.dataset.vows);let currentS='가';function make(){const c=cons[Math.floor(Math.random()*cons.length)],v=vows[Math.floor(Math.random()*vows.length)];const leadMap={'ㄱ':0,'ㄲ':1,'ㄴ':2,'ㄷ':3,'ㄸ':4,'ㄹ':5,'ㅁ':6,'ㅂ':7,'ㅃ':8,'ㅅ':9,'ㅆ':10,'ㅇ':11,'ㅈ':12,'ㅉ':13,'ㅊ':14,'ㅋ':15,'ㅌ':16,'ㅍ':17,'ㅎ':18};const vowMap={'ㅏ':0,'ㅐ':1,'ㅑ':2,'ㅒ':3,'ㅓ':4,'ㅔ':5,'ㅕ':6,'ㅖ':7,'ㅗ':8,'ㅘ':9,'ㅙ':10,'ㅚ':11,'ㅛ':12,'ㅜ':13,'ㅝ':14,'ㅞ':15,'ㅟ':16,'ㅠ':17,'ㅡ':18,'ㅢ':19,'ㅣ':20};currentS=String.fromCharCode(0xAC00+(leadMap[c]*21+vowMap[v])*28);$('#blendTarget').textContent=currentS}$('#blendNew').onclick=make;$('#blendSpeak').onclick=()=>speak(currentS);$('#blendDone').onclick=()=>{count++;$('#blendCount').textContent=count;if(count>=12){markDone(current,100);$('#blendDone').disabled=true} else make()};make()}
+function updateWordCount(){const done=$$('.wordCard[data-done="1"]').length,total=$$('.wordCard').length;$('#wordCount').textContent=done;if(done===total)$('#wordDone').disabled=false}
+function markDone(i,score){}
+function startTimer(){clearInterval(timerInt);seconds=60;$('#timeLeft').textContent=seconds;$('#startTimer').disabled=true;timerInt=setInterval(()=>{seconds--;$('#timeLeft').textContent=seconds;if(seconds<=0){clearInterval(timerInt);$('#startTimer').disabled=false;speak('그만')}} ,1000)}
+function submitFinal(){const sp=Math.max(0,Math.min(300,Number($('#speedInput').value)||0));const ac=Math.max(0,Math.min(100,Number($('#accuracyInput').value)||0));sessionProgress.speed=sp;sessionProgress.accuracy=ac;updateSessionProgress();const ok=sp>=30&&ac>=80;$('#finalFb').textContent=ok?'Đạt chuẩn Chặng 0. Có thể chuyển sang Bài 1.':'Chưa đạt chuẩn. Cần ≥ 30 âm tiết/phút và ≥ 80% độ chính xác.';$('#finalFb').style.color=ok?'#17623c':'#8b1930';if(ok)markDone(current,ac)}
+$('#navTitle').textContent=stages.length+' màn học';
+renderJourney();renderProgress();renderStage();
+})();
+</script>
+</body>
+</html>

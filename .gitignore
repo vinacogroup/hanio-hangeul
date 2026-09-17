@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Voice samples from --audition; throwaway, not part of the course
+audio-audition/
